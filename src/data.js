@@ -80,7 +80,7 @@ const restaurants = [
     {
     id: 1,
     name: "Subway",
-    image: "images/Chicken Keema Melt.jpg",
+    image: "images/subway - Copy.jpg",
     rating: 4.2,
     deliveryTime: "20-25 mins",
     cuisine: "Sandwich, Salads, Wrap, Healthy Food",
@@ -220,7 +220,7 @@ const restaurants = [
   {
     id: 2,
     name: "McDonald's",
-    image: "images/McDonalds-Gourmet-Burger-Collection.jpg",
+    image: "images/mcdonalds.jpg",
     rating: 4.3,
     deliveryTime: "45-50 mins",
     cuisine: "Burgers, Beverages, Cafe, Desserts",
@@ -230,7 +230,7 @@ const restaurants = [
   {
     id: 3,
     name: "HRX by EatFit",
-    image: "vaimages/HRX by EatFit.jpg",
+    image: "images/hxr.jpg",
     rating: 4.4,
     deliveryTime: "55-60 mins",
     cuisine: "Healthy Food, Salads, Burgers",
@@ -240,7 +240,7 @@ const restaurants = [
   {
     id: 4,
     name: "Home Plate by EatFit",
-    image: "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Home plate by EatFit.jpg",
     rating: 4.3,
     deliveryTime: "45-50 mins",
     cuisine: "North Indian, Home Food, Healthy Food, South Indian",
@@ -250,7 +250,7 @@ const restaurants = [
   {
     id: 5,
     name: "Ovenfresh Cakes And Desserts",
-    image: "https://images.pexels.com/photos/4109997/pexels-photo-4109997.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Ovenfresh Cakes and Desserts.jpg",
     rating: 4.4,
     deliveryTime: "35-40 mins",
     cuisine: "Bakery, Desserts, Ice Cream, Sweets, Juices",
@@ -260,7 +260,7 @@ const restaurants = [
   {
     id: 6,
     name: "The Dessert Heaven",
-    image: "https://images.pexels.com/photos/3026803/pexels-photo-3026803.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/dessertheaven.jpg",
     rating: 4.4,
     deliveryTime: "40-45 mins",
     cuisine: "Bakery, Desserts, Sweets, Ice Cream",
@@ -270,7 +270,7 @@ const restaurants = [
   {
     id: 7,
     name: "McDonald's Gourmet Burger Collection",
-    image: "https://images.pexels.com/photos/1435907/pexels-photo-1435907.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/McDonalds-Gourmet-Burger-Collection.jpg",
     rating: 4.3,
     deliveryTime: "45-50 mins",
     cuisine: "Burgers, Cafe, Desserts",
@@ -280,7 +280,7 @@ const restaurants = [
   {
     id: 8,
     name: "Makhani Darbar",
-    image: "https://images.pexels.com/photos/1256343/pexels-photo-1256343.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Makhani Darbar.jpg",
     rating: 4.2,
     deliveryTime: "45-50 mins",
     cuisine: "Kebabs, Mughlai, Beverages, Desserts",
@@ -290,7 +290,7 @@ const restaurants = [
   {
     id: 9,
     name: "Veg Meals by Lunchbox",
-    image: "https://images.pexels.com/photos/5089170/pexels-photo-5089170.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/vegmeal.jpg",
     rating: 4.6,
     deliveryTime: "50-55 mins",
     cuisine: "Biryani, North Indian, Desserts",
@@ -300,7 +300,7 @@ const restaurants = [
   {
     id: 10,
     name: "Faasos' Signature Wraps & Rolls",
-    image: "https://images.pexels.com/photos/1600710/pexels-photo-1600710.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Faasos Signature Wraps & Rolls 2.avif",
     rating: 4.4,
     deliveryTime: "50-55 mins",
     cuisine: "Fast Food, North Indian, Snacks, Desserts",
@@ -310,7 +310,7 @@ const restaurants = [
   {
     id: 11,
     name: "Sharma Punjabi Restaurant",
-    image: "https://images.pexels.com/photos/3659862/pexels-photo-3659862.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Sharma Punjabi.jpg",
     rating: 4.3,
     deliveryTime: "55-60 mins",
     cuisine: "North Indian, Chinese, Punjabi",
@@ -320,7 +320,7 @@ const restaurants = [
   {
     id: 12,
     name: "CakeZone Patisserie",
-    image: "https://images.pexels.com/photos/3026811/pexels-photo-3026811.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/cakezone.jpg",
     rating: 4.4,
     deliveryTime: "40-45 mins",
     cuisine: "Bakery, Desserts, Sweets",
@@ -330,7 +330,7 @@ const restaurants = [
   {
     id: 13,
     name: "EatFit - All Things Healthy",
-    image: "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/EatFit All Things Healthy.jpg",
     rating: 4.5,
     deliveryTime: "45-50 mins",
     cuisine: "Chinese, Healthy Food, Tandoor, Pizzas",
@@ -340,7 +340,7 @@ const restaurants = [
   {
     id: 14,
     name: "Veg Daawat by Behrouz",
-    image: "https://images.pexels.com/photos/3323681/pexels-photo-3323681.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Veg Daawat by Behrouz.jpg",
     rating: 4.2,
     deliveryTime: "55-60 mins",
     cuisine: "Biryani, North Indian, Mughlai",
@@ -350,7 +350,7 @@ const restaurants = [
   {
     id: 15,
     name: "Great Indian Khichdi by EatFit",
-    image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Great indian khichdi by eatfit.avif",
     rating: 4.4,
     deliveryTime: "45-50 mins",
     cuisine: "Home Food, North Indian, Healthy Food",
@@ -360,7 +360,7 @@ const restaurants = [
   {
     id: 16,
     name: "The Biryani Life",
-    image: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/The Biriyani Life.jpg",
     rating: 4.1,
     deliveryTime: "40-45 mins",
     cuisine: "Biryani, Mughlai, Hyderabadi",
@@ -370,7 +370,7 @@ const restaurants = [
   {
     id: 17,
     name: "Firangi Bake",
-    image: "https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/firangi bake.avif",
     rating: 4.2,
     deliveryTime: "45-50 mins",
     cuisine: "Pizzas, Italian, Mexican, Healthy Food",
@@ -380,7 +380,7 @@ const restaurants = [
   {
     id: 18,
     name: "LunchBox - Meals and Thalis",
-    image: "https://images.pexels.com/photos/5768194/pexels-photo-5768194.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/LunchBox Meals and Thalis.jpg",
     rating: 4.6,
     deliveryTime: "40-45 mins",
     cuisine: "Thalis, North Indian, Biryani",
@@ -390,7 +390,7 @@ const restaurants = [
   {
     id: 19,
     name: "Faasos - Wraps, Rolls & Shawarma",
-    image: "https://images.pexels.com/photos/1500453/pexels-photo-1500453.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/Faasos Signature Wraps & Rolls.jpg",
     rating: 4.4,
     deliveryTime: "45-50 mins",
     cuisine: "Kebabs, Snacks, American, Healthy Food",
@@ -400,7 +400,7 @@ const restaurants = [
   {
     id: 20,
     name: "Oven Story Pizza",
-    image: "https://images.pexels.com/photos/1435908/pexels-photo-1435908.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "images/ovenstory pizza.avif",
     rating: 4.3,
     deliveryTime: "45-50 mins",
     cuisine: "Pizzas, Italian, Desserts",

@@ -1,18 +1,13 @@
-
 let currentView = 'home';
 let selectedRestaurant = null;
 let cartItems = [];
 let selectedAddress = 0;
 let selectedPayment = '';
-
-
 document.addEventListener('DOMContentLoaded', function() {
     loadCategories();
     loadRestaurants();
     updateCartUI();
 });
-
-
 function loadCategories() {
     const categoriesGrid = document.getElementById('categories-grid');
     categoriesGrid.innerHTML = '';
@@ -33,8 +28,6 @@ function loadCategories() {
         categoriesGrid.appendChild(categoryCard);
     });
 }
-
-
 function loadRestaurants() {
     const restaurantsGrid = document.getElementById('restaurants-grid');
     restaurantsGrid.innerHTML = '';
@@ -51,11 +44,9 @@ function loadRestaurants() {
                     alt="${restaurant.name}"
                     class="w-full h-48 object-cover rounded-t-2xl"
                 />
-                ${restaurant.promoted ? '<div class="absolute top-3 left-3 bg-orange-600 text-white px-2 py-1 rounded-lg text-xs font-medium">PROMOTED</div>' : ''}
-                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-t-2xl"></div>
+    
             </div>
-            
-            <div class="p-4">
+                <div class="p-4">
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">${restaurant.name}</h3>
                 <p class="text-gray-600 text-sm mb-3">${restaurant.cuisine}</p>
                 
@@ -74,8 +65,7 @@ function loadRestaurants() {
                         <span class="text-sm">${restaurant.deliveryTime}</span>
                     </div>
                 </div>
-                
-                <div class="flex items-center space-x-1 mt-2 text-gray-500">
+                    <div class="flex items-center space-x-1 mt-2 text-gray-500">
                     <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -87,19 +77,12 @@ function loadRestaurants() {
         restaurantsGrid.appendChild(restaurantCard);
     });
 }
-
-
 function showRestaurant(restaurantId) {
     selectedRestaurant = restaurantId;
     const restaurant = restaurants.find(r => r.id === restaurantId);
-    
     if (!restaurant) return;
-    
-    
     document.getElementById('home-view').classList.add('hidden');
     document.getElementById('restaurant-view').classList.remove('hidden');
-    
-    
     const groupedMenu = restaurant.menu.reduce((acc, item) => {
         if (!acc[item.category]) {
             acc[item.category] = [];
@@ -107,18 +90,12 @@ function showRestaurant(restaurantId) {
         acc[item.category].push(item);
         return acc;
     }, {});
-    
-    
     const restaurantContent = document.getElementById('restaurant-detail-content');
     restaurantContent.innerHTML = `
         <!-- Restaurant Info -->
         <div class="relative">
-            <img
-                src="${restaurant.image}"
-                alt="${restaurant.name}"
-                class="w-full h-64 object-cover"
-            />
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <img src="${restaurant.image}" alt="${restaurant.name}" class="w-full h-48 object-cover rounded-t-2xl"/>
+            
             <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <h1 class="text-4xl font-bold mb-2">${restaurant.name}</h1>
                 <p class="text-lg mb-2">${restaurant.cuisine}</p>
@@ -145,11 +122,9 @@ function showRestaurant(restaurantId) {
                 </div>
             </div>
         </div>
-
         <!-- Menu -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Menu</h2>
-            
             ${Object.entries(groupedMenu).map(([category, items]) => `
                 <div class="mb-12">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-6">${category}</h3>
@@ -184,8 +159,6 @@ function showRestaurant(restaurantId) {
     
     currentView = 'restaurant';
 }
-
-
 function addToCart(itemId) {
     const restaurant = restaurants.find(r => r.id === selectedRestaurant);
     const item = restaurant.menu.find(m => m.id === itemId);
@@ -201,8 +174,6 @@ function addToCart(itemId) {
     
     updateCartUI();
 }
-
-
 function updateCartUI() {
     const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
     const cartCountElement = document.getElementById('cart-count');
@@ -216,8 +187,6 @@ function updateCartUI() {
     
     updateCartItems();
 }
-
-
 function updateCartItems() {
     const cartItemsContainer = document.getElementById('cart-items-container');
     const cartSummary = document.getElementById('cart-summary');
@@ -234,8 +203,7 @@ function updateCartItems() {
         `;
         cartSummary.classList.add('hidden');
         return;
-    }
-    
+    }   
     cartItemsContainer.innerHTML = `
         <div class="space-y-4">
             ${cartItems.map(item => `
@@ -271,16 +239,13 @@ function updateCartItems() {
                 </div>
             `).join('')}
         </div>
-    `;
-    
-    
+    `; 
     const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const deliveryFee = 40;
     const platformFee = 5;
     const gst = Math.round((total + deliveryFee + platformFee) * 0.05);
     const grandTotal = total + deliveryFee + platformFee + gst;
-    
-    cartSummary.innerHTML = `
+        cartSummary.innerHTML = `
         <div class="space-y-2 text-sm">
             <div class="flex justify-between">
                 <span>Item total</span>
@@ -302,8 +267,7 @@ function updateCartItems() {
                 <span>Total</span>
                 <span>₹${grandTotal}</span>
             </div>
-        </div>
-        
+        </div>  
         <button
             onclick="showCheckout()"
             class="w-full mt-4 bg-orange-600 text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors"
@@ -313,8 +277,6 @@ function updateCartItems() {
     `;
     cartSummary.classList.remove('hidden');
 }
-
-
 function updateQuantity(itemId, newQuantity) {
     if (newQuantity === 0) {
         cartItems = cartItems.filter(item => item.id !== itemId);
@@ -326,35 +288,25 @@ function updateQuantity(itemId, newQuantity) {
     }
     updateCartUI();
 }
-
-
 function toggleCart() {
     const cartSidebar = document.getElementById('cart-sidebar');
     cartSidebar.classList.toggle('hidden');
 }
-
-
 function showCheckout() {
     toggleCart();
-    
-    
     document.getElementById('home-view').classList.add('hidden');
     document.getElementById('restaurant-view').classList.add('hidden');
     document.getElementById('checkout-view').classList.remove('hidden');
-    
-    
     const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const deliveryFee = 40;
     const platformFee = 5;
     const gst = Math.round((total + deliveryFee + platformFee) * 0.05);
     const grandTotal = total + deliveryFee + platformFee + gst;
-    
     const checkoutContent = document.getElementById('checkout-content');
     checkoutContent.innerHTML = `
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-8">Checkout</h1>
-
-            <!-- Delivery Address -->
+        <!-- Delivery Address -->
             <div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
                 <h2 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                     <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -365,11 +317,8 @@ function showCheckout() {
                 </h2>
                 <div class="space-y-4">
                     ${addresses.map(address => `
-                        <div
-                            class="p-4 border rounded-xl cursor-pointer transition-all address-option ${selectedAddress === address.id ? 'selected' : ''}"
-                            onclick="selectAddress(${address.id})"
-                        >
-                            <div class="flex items-start space-x-3">
+                        <div class="p-4 border rounded-xl cursor-pointer transition-all address-option ${selectedAddress === address.id ? 'selected' : ''}" onclick="selectAddress(${address.id})">
+                         <div class="flex items-start space-x-3">
                                 <div class="w-4 h-4 rounded-full border-2 mt-1 ${selectedAddress === address.id ? 'border-orange-500 bg-orange-500' : 'border-gray-300'}"></div>
                                 <div>
                                     <h3 class="font-semibold text-gray-900">${address.type}</h3>
@@ -381,7 +330,6 @@ function showCheckout() {
                     `).join('')}
                 </div>
             </div>
-
             <!-- Payment Method -->
             <div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
                 <h2 class="text-xl font-semibold text-gray-900 mb-4">Payment Method</h2>
@@ -403,7 +351,6 @@ function showCheckout() {
                     `).join('')}
                 </div>
             </div>
-
             <!-- Order Summary -->
             <div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
                 <h2 class="text-xl font-semibold text-gray-900 mb-4">Order Summary</h2>
@@ -430,7 +377,6 @@ function showCheckout() {
                     </div>
                 </div>
             </div>
-
             <!-- Place Order Button -->
             <button
                 onclick="placeOrder()"
@@ -440,11 +386,8 @@ function showCheckout() {
             </button>
         </div>
     `;
-    
     currentView = 'checkout';
 }
-
-
 function getPaymentIcon(iconType) {
     const icons = {
         'credit-card': '<svg class="h-5 w-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>',
@@ -454,17 +397,12 @@ function getPaymentIcon(iconType) {
     };
     return icons[iconType] || icons['credit-card'];
 }
-
-
 function selectAddress(addressId) {
     selectedAddress = addressId;
-    
     document.querySelectorAll('.address-option').forEach(option => {
         option.classList.remove('selected');
     });
     document.querySelectorAll('.address-option')[addressId].classList.add('selected');
-    
-    
     document.querySelectorAll('.address-option .w-4.h-4').forEach((radio, index) => {
         if (index === addressId) {
             radio.className = 'w-4 h-4 rounded-full border-2 mt-1 border-orange-500 bg-orange-500';
@@ -473,17 +411,12 @@ function selectAddress(addressId) {
         }
     });
 }
-
-
-function selectPayment(paymentId) {
+    function selectPayment(paymentId) {
     selectedPayment = paymentId;
-    
     document.querySelectorAll('.payment-method').forEach(option => {
-        option.classList.remove('selected');
+    option.classList.remove('selected');
     });
     document.querySelector(`[onclick="selectPayment('${paymentId}')"]`).classList.add('selected');
-    
-    
     document.querySelectorAll('.payment-method .w-4.h-4').forEach((radio, index) => {
         if (paymentMethods[index].id === paymentId) {
             radio.className = 'w-4 h-4 rounded-full border-2 border-orange-500 bg-orange-500';
@@ -492,39 +425,25 @@ function selectPayment(paymentId) {
         }
     });
 }
-
-
 function placeOrder() {
     if (!selectedPayment) {
         alert('Please select a payment method');
         return;
     }
-    
-    
     document.getElementById('checkout-view').classList.add('hidden');
     document.getElementById('success-view').classList.remove('hidden');
-    
-    
     cartItems = [];
     updateCartUI();
-    
     currentView = 'success';
 }
-
-
 function showHome() {
-    
     document.getElementById('home-view').classList.remove('hidden');
     document.getElementById('restaurant-view').classList.add('hidden');
     document.getElementById('checkout-view').classList.add('hidden');
-    document.getElementById('success-view').classList.add('hidden');
-    
+    document.getElementById('success-view').classList.add('hidden');  
     currentView = 'home';
     selectedRestaurant = null;
 }
-
-
 function handleLocationClick() {
-    console.log('Location clicked');
-    
+    console.log('Location clicked'); 
 }
