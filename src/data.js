@@ -240,7 +240,7 @@ const restaurants = [
   {
     id: 4,
     name: "Home Plate by EatFit",
-    image: "images/Home plate by EatFit.jpg",
+    image: "images/eatfithp.jpg",
     rating: 4.3,
     deliveryTime: "45-50 mins",
     cuisine: "North Indian, Home Food, Healthy Food, South Indian",
@@ -250,7 +250,7 @@ const restaurants = [
   {
     id: 5,
     name: "Ovenfresh Cakes And Desserts",
-    image: "images/Ovenfresh Cakes and Desserts.jpg",
+    image: "images/ovencake.jpeg",
     rating: 4.4,
     deliveryTime: "35-40 mins",
     cuisine: "Bakery, Desserts, Ice Cream, Sweets, Juices",
@@ -280,7 +280,7 @@ const restaurants = [
   {
     id: 8,
     name: "Makhani Darbar",
-    image: "images/Makhani Darbar.jpg",
+    image: "images/makhani.jpg",
     rating: 4.2,
     deliveryTime: "45-50 mins",
     cuisine: "Kebabs, Mughlai, Beverages, Desserts",
@@ -310,7 +310,7 @@ const restaurants = [
   {
     id: 11,
     name: "Sharma Punjabi Restaurant",
-    image: "images/Sharma Punjabi.jpg",
+    image: "images/punjabi.jpg",
     rating: 4.3,
     deliveryTime: "55-60 mins",
     cuisine: "North Indian, Chinese, Punjabi",
@@ -320,7 +320,7 @@ const restaurants = [
   {
     id: 12,
     name: "CakeZone Patisserie",
-    image: "images/cakezone.jpg",
+    image: "images/cake.jpeg",
     rating: 4.4,
     deliveryTime: "40-45 mins",
     cuisine: "Bakery, Desserts, Sweets",
@@ -330,7 +330,7 @@ const restaurants = [
   {
     id: 13,
     name: "EatFit - All Things Healthy",
-    image: "images/EatFit All Things Healthy.jpg",
+    image: "images/eatfit.png",
     rating: 4.5,
     deliveryTime: "45-50 mins",
     cuisine: "Chinese, Healthy Food, Tandoor, Pizzas",
@@ -340,7 +340,7 @@ const restaurants = [
   {
     id: 14,
     name: "Veg Daawat by Behrouz",
-    image: "images/Veg Daawat by Behrouz.jpg",
+    image: "images/behrouz.png",
     rating: 4.2,
     deliveryTime: "55-60 mins",
     cuisine: "Biryani, North Indian, Mughlai",
@@ -350,7 +350,7 @@ const restaurants = [
   {
     id: 15,
     name: "Great Indian Khichdi by EatFit",
-    image: "images/Great indian khichdi by eatfit.avif",
+    image: "images/khichdi.png",
     rating: 4.4,
     deliveryTime: "45-50 mins",
     cuisine: "Home Food, North Indian, Healthy Food",
@@ -360,7 +360,7 @@ const restaurants = [
   {
     id: 16,
     name: "The Biryani Life",
-    image: "images/The Biriyani Life.jpg",
+    image: "images/briyanilife.png",
     rating: 4.1,
     deliveryTime: "40-45 mins",
     cuisine: "Biryani, Mughlai, Hyderabadi",
@@ -390,7 +390,7 @@ const restaurants = [
   {
     id: 19,
     name: "Faasos - Wraps, Rolls & Shawarma",
-    image: "images/Faasos Signature Wraps & Rolls.jpg",
+    image: "images/faasos.png",
     rating: 4.4,
     deliveryTime: "45-50 mins",
     cuisine: "Kebabs, Snacks, American, Healthy Food",
